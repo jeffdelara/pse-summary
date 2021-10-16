@@ -5,26 +5,26 @@ const searchInput = document.getElementById('search');
 searchInput.addEventListener('keyup', (e) => {
     if(fetchedStocks) {
         // search using regex for Symbol
-        let matched_stock = fetchedStocks.filter(stock => {
+        let matchedStock = fetchedStocks.filter(stock => {
             const reg1 = "[a-zA-Z0-9]*";
             const regex = new RegExp(searchInput.value.toUpperCase() + reg1);
             return stock.symbol.match(regex);
         });
 
-        let matched_name = fetchedStocks.filter(stock => {
+        let matchedName = fetchedStocks.filter(stock => {
             const reg1 = "[a-zA-Z0-9]*";
             const regex = new RegExp(searchInput.value.toUpperCase() + reg1);
             return stock.name.toUpperCase().match(regex);
         });
         
-        const joined_array = matched_stock.concat(matched_name);
+        const joinedArray = matchedStock.concat(matchedName);
 
         // remove the duplicates
-        let final_search_results = joined_array.filter((item, index) => {
-            return joined_array.indexOf(item) === index;
+        let finalSearchResults = joinedArray.filter((item, index) => {
+            return joinedArray.indexOf(item) === index;
         });
 
-        displayData(final_search_results);
+        displayData(finalSearchResults);
         clearLinks();
     }
 });
