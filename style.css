@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem;
+}
+.card {
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    width: 200px;
+    transition: .3s;
+}
+
+.card:hover {
+    border: 3px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.red {
+    background-color: rgba(255, 154, 143, 0.8);
+    border: 3px solid rgba(255, 154, 143, 0.8);
+    color: darkred;
+}
+
+.green {
+    background-color: rgba(229, 239, 172, 0.8);
+    border: 3px solid rgba(229, 239, 172, 0.8);
+    color: darkgreen;
+}
+
+.small {
+    font-size: 1rem;
+}
+
+#search {
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: #EEE;
+    margin: .5rem 0;
+    text-align: center;
+}
+#status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status ul {
+    list-style-type: none;
+}
+
+#status ul li {
+    display: inline-block;
+    margin: .5rem .1rem;
+}
+
+#status a {
+    text-decoration: none;
+    color: cadetblue;
+    /* background-color: rgba(95, 158, 160, 0.2); */
+    padding: .3rem .5rem;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+#status a:hover {
+    color: rgb(66, 125, 128);
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+#status ul li a.active {
+    color: rgb(66, 125, 128);
+    background-color: rgba(95, 158, 160, 0.5);
+}
