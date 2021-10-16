@@ -118,7 +118,7 @@ const clearLinks = () => {
 function getData()
 {
     allLink.classList.add('active');
-    fetch('http://phisix-api4.appspot.com/stocks.json')
+    fetch('https://phisix-api4.appspot.com/stocks.json')
         .then(response => response.json())
         .then(data => { 
             fetchedStocks = data.stock;
